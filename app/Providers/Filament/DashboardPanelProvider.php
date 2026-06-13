@@ -56,6 +56,8 @@ class DashboardPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->resourceCreatePageRedirect('index')
+            ->resourceEditPageRedirect('index');
     }
 }
